@@ -2,4 +2,4 @@
 .DS_Store
 
 # Windows 탐색기가 이미지 파일이 포함된 폴더를 열 때, 미리보기를 빠르게 표시하기 위해 썸네일(작은 이미지 미리보기) 데이터를 저장하는 파일
-./asset/Thumbs.db
+Thumbs.db
