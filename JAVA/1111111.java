@@ -10,6 +10,7 @@ class Solution {
 
     }
 
+	/** 크기가 작은 부분 문자열 */
     public static int soluation(String t, String p) {
 		int answer = 0;
 		int start = 0;

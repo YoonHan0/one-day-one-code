@@ -1,5 +1,6 @@
 package JAVA;
 
+/** 덧칠하기 */
 public class Soluation0224_001 {
     public static void main(String[] args)  {
         /* 
@@ -15,7 +16,6 @@ public class Soluation0224_001 {
 		int result = soluation(n, m, section);
 		System.out.println("### 정답 확인 ### \n" + result);
     }
-
 
 	public static int soluation(int n, int m, int[] section) {
 		int start = section[0];
