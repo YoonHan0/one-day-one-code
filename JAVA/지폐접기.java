@@ -1,6 +1,6 @@
 package JAVA;
 
-public class Solution0310_001 {
+public class 지폐접기 {
     
     // 개선전 코드
     public static void main(String[] args) {
