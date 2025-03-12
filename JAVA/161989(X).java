@@ -13,17 +13,31 @@ public class Soluation0224_001 {
 		int m = 4;
 		int[] section = {2, 3, 6};
 
-		int result = soluation(n, m, section);
+		int result = solution(n, m, section);
 		System.out.println("### 정답 확인 ### \n" + result);
     }
 
-	public static int soluation(int n, int m, int[] section) {
-		int start = section[0];
-		int end = section[section.length - 1];
-		int len = end - start + 1;
-		
-		int result = ( len / m ) + ( len % m );
+	public static int solution(int n, int m, int[] section) {
+		int result = 1;
+		int colorArea = section[0] + m - 1;
+
+		for(int i=0; i<section.length; i++) {
+			if(section[i] > colorArea) {
+				result++;
+				colorArea = section[i] + m - 1;
+			}
+		}
+		return result;
+
+		/* // ----- 근거는 없지만 프로그래머스에서도 돌려보기 -----
+		int len = section[section.length - 1] - section[0] + 1;
+		int result = 1;
+
+		for(int i=m; i<len; i+=m) {
+			result++;
+		}
 
 		return result;
+		*/
 	}
 }
