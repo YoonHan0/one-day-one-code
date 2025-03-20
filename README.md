@@ -7,6 +7,12 @@
 
 <br />
 
+### 내용 정리
+[알고리즘 문제를 풀면서 알게 된 문법들 정리](./algorithm-folder/java-note/arrayList-note.md) <br />
+[자바 메서드 사용법](algorithm-folder/java-note/자바_메서드_사용법.md)
+
+<br />
+
 ### 프로그래머스
 ![2025.02.11 진행상황](./asset/2025.02.11.png)
 ![2025.02.17 진행상황](./asset/2025.02.17.png)
