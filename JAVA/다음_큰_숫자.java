@@ -16,13 +16,14 @@ public class 다음_큰_숫자 {
 		* 2) while(true)로 n을 1씩 증가, 증가된 자연수를 이진수로 변환 후 1의 개수를 체크
 		* 3) 1의 개수가 동일해지면 break 하고 해당 자연수 리턴
 		* */
+		/*	----- 개선전 -----
 		String binaryN = Integer.toBinaryString(n);
 		int binaryN1Cnt = Arrays.stream(binaryN.split(""))	// 파라미터 n이 이진수일 때 가지는 '1'의 개수
 				.filter(t -> "1".equals(t))
 				.collect(Collectors.joining())
 				.length();
 		int result = 0;
-        
+
 		while(true) {
 			n++;
 			String binaryNplus = Integer.toBinaryString(n);
@@ -36,5 +37,24 @@ public class 다음_큰_숫자 {
 			}
 		}
 		return result;
+		*/
+		/*		--- 두 번째 개선 코드 ---
+		String binaryN = Integer.toBinaryString(n);
+		long nCnt = binaryN.chars().filter(c -> c == '1').count();
+		while(true) {
+			long nextNcnt = Integer.toBinaryString(++n).chars().filter(c -> c == '1').count();
+			if(nCnt == nextNcnt) {
+				return n;
+			}
+		}
+		 */
+		//		--- 최종코드 ---
+		int binaryNcnt = Integer.bitCount(n);	// 정수 n이 이진수일 때 1의 개수를 리턴
+		while(true) {
+			n++;
+			if(Integer.bitCount(n) == binaryNcnt) {
+				return n;
+			}
+		}
 	}
 }
