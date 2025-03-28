@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class 구명보트 {
     
     public static void main(String[] args) {
@@ -7,6 +10,7 @@ public class 구명보트 {
 
 	}
 	public static int solution(int[] people, int limit) {
+		/*
 		List<Integer> stack = new ArrayList<>();
 		int result = 0;
 
@@ -26,6 +30,20 @@ public class 구명보트 {
 			}
 		}
 		return result + stack.size();
+		*/
+		Arrays.sort(people);		// 오름차순 정렬
+		int sIndex = 0;
+		int eIndex = people.length - (sIndex+1);
+		int result = 0;
+
+		while(sIndex < eIndex) {
+			if(limit >= people[sIndex] + people[eIndex]) {
+				sIndex++;
+			}
+			result++;
+			eIndex--;
+		}
+		return result;
 	}
 
 	public static int sum(List<Integer> stack) {
