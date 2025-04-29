@@ -9,7 +9,8 @@
 
 ### 내용 정리
 [알고리즘 문제를 풀면서 알게 된 문법들 정리](./algorithm-folder/java-note/arrayList-note.md) <br />
-[자바 메서드 사용법](algorithm-folder/java-note/자바_메서드_사용법.md)
+[자바 메서드 사용법](algorithm-folder/java-note/자바_메서드_사용법.md) <br />
+[ArrayList.contains() vs Set.contains()](algorithm-folder/java-note/Set_vs_ArrayList.md)
 
 <br />
 
